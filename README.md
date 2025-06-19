@@ -99,9 +99,25 @@ pip install -r requirements.txt
 - **Gender/orientation**: No overall gender effect, but differences exist within some orientations.
 - **Location**: No general effect, but some impact for non-binary users.
 
+## Model
+
+The project uses a **logistic regression model** to predict user success (mutual match or date happened) based on profile and behavioral features. The model includes both numerical and categorical variables (such as gender, sexual orientation, and location type) using one-hot encoding and feature scaling.
+
+**Model Highlights:**
+- **Features used:** App usage time, messages sent, swipe ratio, profile pictures, bio length, activity score, profile completeness, gender, sexual orientation, and location type.
+- **Performance:**  
+    - **Accuracy:** 97%
+    - **Precision/Recall/F1-score:** All above 0.97 for both classes
+    - **ROC-AUC Score:** 0.998 (excellent discrimination between success and non-success)
+- **Interpretation:**  
+    - The model is highly effective at predicting which users are likely to achieve success on the app, confirming the importance of activity and profile completeness.
+
+You can find the full model implementation and evaluation in the notebook:  
+[ProyectoDSAlvaroCancino.ipynb](coder_house/Dating_app_behavior_coderhouse/ProyectoDSAlvaroCancino.ipynb)
+
 ## License
 
-This project is for educational purposes. Dataset is synthetic and sourced from Kaggle.
+This project is for educational purposes. Dataset is synthetic and sourced from Kaggle + additional adjustment from the me, the owner of this project.
 
 ---
 
